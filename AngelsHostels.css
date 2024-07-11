@@ -1,0 +1,273 @@
+:root{
+    --color1: #612674;
+    --dafaultGap: 1rem;
+}
+
+html{
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4{
+    font-family: "Oxygen", sans-serif;
+}
+
+.maxWidth{
+    max-width: 70.25em;
+    margin: auto;
+}
+
+.topHeader{
+    text-align: center;
+}
+
+.topHeaderNav{
+    background-color: var(--color1);
+}
+
+.topHeaderNav ul{
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.topHeaderNav a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+}
+
+.topHeaderNav li:hover{
+    background-color: color-mix(in srgb, var(--color1), white 10%);
+}
+
+@media screen and (min-width: 48.75em){
+        .topHeader{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .topHeaderLogo{
+            margin-left: 1.5em;
+        }
+
+        .topHeaderNav{
+            background-color: initial;
+        }
+
+        .topHeaderNav a{
+            color:var(--color1);
+        }
+
+        .topHeaderNav a:hover{
+            background-color: color-mix(in srgb, var(--color1), white 85%)
+        }
+
+        .topHeaderNav li{
+            display: inline-block;
+        }
+}
+
+.banner{
+    text-align: center;
+    background-color: #f6f6f6;
+    padding: 1em;
+}
+
+.bannerIconPlay{
+    height: 5em;
+    width: 5em;
+    display: none;
+}
+
+.bannerIconPlay img{
+    width: 100%;
+}
+
+.bannerTitle{
+    color: var(--color1);
+    font-size: 1.5em;
+    margin: 1.5em 0;
+}
+
+.bannerSubTitle{
+    font-size: 1em;
+    color: color-mix(in srgb, var(--color1), white);
+    line-height: 1.5;
+}
+
+.bannerButton{
+    display: inline-block;
+    padding: 0.9em 2em;
+    background-color: #58c4c4;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 48.75em){
+    .banner{
+        background-color: var(--color1);
+        color: white;
+    }
+
+    .bannerIconPlay{
+        display: block;
+        margin: auto;
+    }
+
+    .bannerTitle, .bannerSubTitle{
+        color: white;
+    }
+}
+
+@media  screen and (min-width: 56.25em) {
+    .banner{
+        background-image: url(ProjetoAngelsHosters-inicio/images/bg_topo_1198x670.jpg);
+        aspect-ratio: 1198 / 670;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .banner .maxWidth{
+        margin: initial;
+        margin-bottom: 4em;
+        width: 75%;
+    }
+}
+
+@media  screen and (min-width: 74em) {
+    .banner{
+        background-image: linear-gradient(transparent, var(--color1)), url(ProjetoAngelsHosters-inicio/images/bg_topo_1600x1374.jpg);
+        background-position: center top; 
+        background-size: cover;
+        background-repeat: no-repeat;
+        max-height: 80vh;
+        width: 100%;
+    }
+
+    .banner .maxWidth{
+        width: 50%;
+    }
+
+    .banner .bannerIconPlay{
+        width: 7em;
+        height: 7em;   
+    }
+}
+
+.middleContent{
+    background-color: #f6f6f6;
+    text-align: center;
+    padding: 2em;
+}
+
+.middleContentTitle{
+    text-transform: uppercase;
+    color: var(--color1);
+    font-size: 1.25em;
+}
+
+.middleContent a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.middleContent span[class^="icon-"]{
+    color: var(--color1);
+    font-size: 3.5em;
+}
+
+.middleContent p{
+    line-height: 1.5;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--dafaultGap);
+}
+
+.col{
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+.colSm12{
+    width: 100%;
+}
+
+@media screen and (min-width: 48.75em){
+    .colMd6{
+        width: calca(50% - var(--dafaultGap));
+    }
+}
+
+@media screen and (min-width: 74em){
+    .colXl3{
+        width: calca(25% - var(--dafaultGap));
+    }
+
+    .colXl6{
+        width: calc(50% - var(--dafaultGap));
+    }
+}
+
+.mainContent{
+    padding: 2em;
+}
+
+.mainContent p{
+    line-height: 1.2;
+}
+
+.imgMainContent img{
+    width: 100%;
+}
+
+.titleMainContent{
+    text-transform: uppercase;
+    color: var(--color1);
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    font-size: 1.25em;
+}
+
+.mainContent .row{
+    row-gap: 4em;
+}
+
+.articleMainContent{
+    container: mainContent / inline-size;
+}
+
+@container mainContent (min-width: 500px){
+    .containerMainContent{
+        display: flex;
+        gap: var(--dafaultGap);
+    }
+
+    .titleMainContent{
+        margin-top: 0;
+    }
+
+    .imgMainContent{
+        flex: 0 0 25%;
+    }
+
+    .imgMainContent img{
+        max-height: 382px;
+    }
+
+    .textMainContent{
+        flex-grow: 1;
+    }
+}
+
+.footer{
+    background-color: #25303e;
+    color: #83969f;
+    text-align: center;
+    padding: 2em;
+}

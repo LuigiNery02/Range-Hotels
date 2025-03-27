@@ -2,4 +2,4 @@ Angels Hostels is a project where I started implementing responsiveness for mult
 
 **[See Page](https://luigineryproject8.netlify.app)** 
 
-![Gameplay Preview](Range-Hotels/ProjetoAngelsHosters-inicio/images/image1.png)
+![Gameplay Preview](ProjetoAngelsHosters-inicio/images/image1.png)
